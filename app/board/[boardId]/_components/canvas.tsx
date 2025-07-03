@@ -33,6 +33,7 @@ import { nanoid } from "nanoid";
 import { LiveObject } from "@liveblocks/client";
 import { LayerPreview } from "./layer-preview";
 import { SelectionBox } from "./selection-box";
+import { SelectionTools } from "./selection-tools";
 
 interface CanvasProps {
   boardId: string;
@@ -278,6 +279,10 @@ export const Canvas = ({ boardId }: CanvasProps) => {
         canUndo={canUndo}
         undo={history.undo}
         redo={history.redo}
+      />
+      <SelectionTools
+      camera={camera}
+      setLastUseColor={setLastUseColor}
       />
       <svg
         onWheel={onWheel}
