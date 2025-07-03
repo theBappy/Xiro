@@ -41,31 +41,26 @@ export function resizeBounds(
   corner: Side,
   point: Point
 ): XYWH {
-  const result = {
-    x: bounds.x,
-    y: bounds.y,
-    width: bounds.width,
-    height: bounds.height,
+  const result = { ...bounds };
+
+  if ((corner & Side.Left) === Side.Left) {
+    const right = result.x + result.width;
+    result.x = Math.min(point.x, right);
+    result.width = Math.abs(right - point.x);
   }
 
-  if((corner && Side.Left) === Side.Left){
-    result.x = Math.min(point.x, bounds.x + bounds.width)
-    result.width = Math.abs(bounds.x + bounds.width - point.x)
+  if ((corner & Side.Right) === Side.Right) {
+    result.width = Math.abs(point.x - result.x);
+  }
 
-    if((corner && Side.Right) === Side.Right){
-      result.x = Math.min(point.x, bounds.x)
-      result.width = Math.abs(point.x - bounds.x)
-    }
+  if ((corner & Side.Top) === Side.Top) {
+    const bottom = result.y + result.height;
+    result.y = Math.min(point.y, bottom);
+    result.height = Math.abs(bottom - point.y);
+  }
 
-    if((corner && Side.Top) === Side.Top){
-      result.y = Math.min(point.y, bounds.y + bounds.height)
-      result.height = Math.abs(bounds.y + bounds.height - point.y)
-    }
-
-    if((corner && Side.Bottom) === Side.Bottom){
-      result.y = Math.min(point.y, bounds.y)
-      result.height = Math.abs(point.y - bounds.y)
-    }
+  if ((corner & Side.Bottom) === Side.Bottom) {
+    result.height = Math.abs(point.y - result.y);
   }
 
   return result;
