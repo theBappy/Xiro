@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useState, useMemo } from "react";
+import { useCallback, useState, useMemo, useEffect } from "react";
 import { Info } from "./info";
 import { Path } from "./path";
 import { Participant } from "./participant";
@@ -39,6 +39,10 @@ import { LiveObject } from "@liveblocks/client";
 import { LayerPreview } from "./layer-preview";
 import { SelectionBox } from "./selection-box";
 import { SelectionTools } from "./selection-tools";
+import { useDisableScrollBounce } from "@/hooks/use-disable-scroll-bounce";
+import { useDeleteLayers } from "@/hooks/use-delete-layers";
+
+
 
 interface CanvasProps {
   boardId: string;
@@ -47,6 +51,8 @@ interface CanvasProps {
 const MAX_LAYERS = 100;
 
 export const Canvas = ({ boardId }: CanvasProps) => {
+  const deleteLayers = useDeleteLayers()
+
   const layerIds = useStorage((root) => root.layerIds);
 
   const pencilDraft = useSelf((me) => me.presence.pencilDraft)
@@ -63,6 +69,8 @@ export const Canvas = ({ boardId }: CanvasProps) => {
     b: 0,
   });
 
+  
+  useDisableScrollBounce()
   const history = useHistory();
   const canUndo = useCanUndo();
   const canRedo = useCanRedo();
@@ -386,6 +394,35 @@ export const Canvas = ({ boardId }: CanvasProps) => {
     }
     return layerIdsToColorSelection;
   }, [selections]);
+
+
+
+  useEffect(() => {
+    function onKeyDown(e:KeyboardEvent){
+      switch(e.key){
+        // case 'Backspace':
+        //   deleteLayers();
+        //   break;
+        case 'z': {
+          if( e.ctrlKey || e.metaKey){
+            if(e.shiftKey){
+              history.redo()
+            }else{
+              history.undo()
+            }
+            break;
+          }
+        } 
+      }
+    }
+    document.addEventListener('keydown', onKeyDown)
+
+    return () => {
+      document.removeEventListener('keydown', onKeyDown)
+    }
+
+  },[deleteLayers, history])
+
 
   return (
     <main className="h-full w-full relative bg-neutral-100 touch-none">
