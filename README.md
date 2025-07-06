@@ -32,8 +32,8 @@ s]
 ### Whiteboard View
 
 ![Whiteboard]
-![screencapture-localhost-3000-board-j575e6actw8zb7z99r4gmpw73h7k7r87-2025-07-07-00_23_17](https://github.com/user-attachments/assets/f2cc4ce5-a414-4296-9859-50fa040b898e)
-
+!
+![this](https://github.com/user-attachments/assets/c560d341-cec0-484f-8402-012e914384a3)
 
 ---
 
