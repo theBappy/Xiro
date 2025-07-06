@@ -26,11 +26,11 @@ Xiro is a powerful **Miro-like real-time whiteboard** that empowers users to **d
 
 ### Team Boards View
 
-![Team Boards](attachment:/mnt/data/screencapture-localhost-3000-2025-07-07-00_18_18.png)
+![Team Boards](https://user-images.githubusercontent.com/your-username/team-boards-screenshot.png)
 
 ### Whiteboard View
 
-![Whiteboard](attachment:/mnt/data/screencapture-localhost-3000-board-j57fttg69mjcg90d9vbm0jdg197k785n-2025-07-07-00_19_16.png)
+![Whiteboard](https://user-images.githubusercontent.com/your-username/whiteboard-screenshot.png)
 
 ---
 
@@ -53,7 +53,7 @@ Xiro is a powerful **Miro-like real-time whiteboard** that empowers users to **d
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/theBappy/Xiro
+git clone https://github.com/your-username/xiro.git
 cd xiro
 ```
 
