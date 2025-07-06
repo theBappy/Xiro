@@ -26,12 +26,13 @@ Xiro is a powerful **Miro-like real-time whiteboard** that empowers users to **d
 
 ### Team Boards View
 
-[screencapture-localhost-3000-2025-07-07-00_18_18](https://github.com/user-attachments/assets/d911df835b11-4ee0-808b-355f6055edf3)
+![Team Board![screencapture-localhost-3000-2025-07-07-00_18_18](https://github.com/user-attachments/assets/a99311d4-11ac-4fac-9da6-00569fd906cc)
 s]
 
 ### Whiteboard View
 
-[screencapture-localhost-3000-board-j575e6actw8zb7z99r4gmpw73h7k7r87-2025-07-07-00_23_17](https://github.com/user-attachments/assets/d94f8ede-e0d2-43a2-b376-0956664f5fb5)
+![Whiteboard]
+![screencapture-localhost-3000-board-j575e6actw8zb7z99r4gmpw73h7k7r87-2025-07-07-00_23_17](https://github.com/user-attachments/assets/f2cc4ce5-a414-4296-9859-50fa040b898e)
 
 
 ---
