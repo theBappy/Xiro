@@ -1,9 +1,10 @@
 "use client";
 
+import { shallow, useOthersMapped } from "@liveblocks/react";
 import { memo } from "react";
 import { useOthersConnectionIds } from "@liveblocks/react/suspense";
 import { Cursor } from "./cursor";
-import { shallow, useOthersMapped } from "@liveblocks/react";
+
 import { Path } from "./path";
 import { colorToCss } from "@/lib/utils";
 
@@ -18,7 +19,6 @@ const Cursors = () => {
     </>
   );
 };
-
 
 const Drafts = () => {
   const others = useOthersMapped((other) =>({
@@ -38,7 +38,7 @@ const Drafts = () => {
               points={other.pencilDraft}
               fill={other.penColor ? colorToCss(other.penColor): '#000'}
             />
-          )
+          );
         }
         return null;
       })}
@@ -49,7 +49,7 @@ const Drafts = () => {
 export const CursorPresence = memo(() => {
   return (
     <>
-    <Drafts />
+      <Drafts />
       <Cursors />
     </>
   );

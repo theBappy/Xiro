@@ -1,37 +1,128 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Xiro – Real-time Collaborative Whiteboard
 
-## Getting Started
+# 🚀 Xiro – Real-time Collaborative Whiteboard
 
-First, run the development server:
+Xiro is a powerful **Miro-like real-time whiteboard** that empowers users to **draw, collaborate, and create** together, whether it's for brainstorming, teaching, or product planning.
+
+---
+
+## ✨ Features
+
+* 🛠️ **Whiteboard from Scratch**
+* 🧰 **Toolbar** with Text, Shapes, Sticky Notes & Pencil
+* 🪄 **Layering System** (bring to front, send to back)
+* 🎨 **Color Selection** for shapes, texts, and drawings
+* ↩️ **Undo & Redo** History Support
+* ⌨️ **Keyboard Shortcuts** for seamless control
+* 🤝 **Real-time Collaboration** (watch group activity live)
+* 💾 **Real-time Database** with Convex
+* 🔐 **Authentication, Teams & Invites**
+* ⭐ **Favorites** to quickly access boards
+* 🌐 Built with **Next.js 14, TypeScript, Zustand, Convex, TailwindCSS, shadcn/ui**
+
+---
+
+## 📸 Screenshots
+
+### Team Boards View
+
+![Team Boards](attachment:/mnt/data/screencapture-localhost-3000-2025-07-07-00_18_18.png)
+
+### Whiteboard View
+
+![Whiteboard](attachment:/mnt/data/screencapture-localhost-3000-board-j57fttg69mjcg90d9vbm0jdg197k785n-2025-07-07-00_19_16.png)
+
+---
+
+## 🛠️ Tech Stack
+
+| Technology                                                                                                    | Usage                           |
+| ------------------------------------------------------------------------------------------------------------- | ------------------------------- |
+| ![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat\&logo=nextdotjs\&logoColor=white)           | App Framework                   |
+| ![React](https://img.shields.io/badge/React-20232A?style=flat\&logo=react\&logoColor=61DAFB)                  | UI Library                      |
+| ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat\&logo=typescript\&logoColor=white)    | Type Safety                     |
+| ![Convex](https://img.shields.io/badge/Convex-6A0DAD?style=flat\&logoColor=white)                             | Real-time Database & Backend    |
+| ![Zustand](https://img.shields.io/badge/Zustand-FFAA00?style=flat\&logoColor=white)                           | State Management                |
+| ![TailwindCSS](https://img.shields.io/badge/TailwindCSS-06B6D4?style=flat\&logo=tailwindcss\&logoColor=white) | Styling                         |
+| ![shadcn/ui](https://img.shields.io/badge/shadcn/ui-111827?style=flat\&logoColor=white)                       | Pre-built Accessible Components |
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/theBappy/Xiro
+cd xiro
+```
+
+### 2. Install Dependencies
+
+```bash
+npm install
+```
+
+### 3. Setup Convex
+
+* Follow the [Convex documentation](https://docs.convex.dev/) to set up your backend.
+* Connect your project using:
+
+```bash
+npx convex dev
+```
+
+### 4. Start the Development Server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+> Visit `http://localhost:3000` to use Xiro locally.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛠️ Folder Structure
 
-## Learn More
+```plaintext
+.
+├── app           # Next.js 14 App Router
+├── components    # Shared and UI components
+├── lib           # Utilities and helpers
+├── convex        # Convex backend logic
+├── hooks         # Custom hooks (Zustand, etc.)
+├── public        # Static assets
+├── styles        # TailwindCSS & global styles
+└── types         # TypeScript types
+```
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## ✅ Roadmap
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+* [x] Real-time drawing
+* [x] Real-time collaboration
+* [x] Authentication and Teams
+* [x] Layer management
+* [x] Undo/Redo functionality
+* [x] Toolbar with Text, Shapes, Sticky Notes, Pencil
+* [ ] Export as image or PDF
+* [ ] Multi-device optimization
+* [ ] Commenting system
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🙏 Acknowledgements
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# Xiro
+* Inspired by [Miro](https://miro.com/)
+* Built with 💙 using Next.js, Convex, TailwindCSS, Zustand, and shadcn/ui
+
+---
+
+## 📄 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+*"Xiro: Collaborate, Create, and Connect in Real Time."*

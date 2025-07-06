@@ -478,8 +478,7 @@ export const Canvas = ({ boardId }: CanvasProps) => {
               points={pencilDraft}
               fill={colorToCss(lastUseColor)}
               x={0}
-              y={0}
-              
+              y={0}    
             />
           )}
         </g>
