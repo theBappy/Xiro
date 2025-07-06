@@ -18,7 +18,7 @@ Xiro is a powerful **Miro-like real-time whiteboard** that empowers users to **d
 * 💾 **Real-time Database** with Convex
 * 🔐 **Authentication, Teams & Invites**
 * ⭐ **Favorites** to quickly access boards
-* 🌐 Built with **Next.js 14, TypeScript, Zustand, Convex, TailwindCSS, shadcn/ui**
+* 🌐 Built with **Next.js 15, TypeScript, Zustand, Convex, TailwindCSS, shadcn/ui**
 
 ---
 
@@ -26,11 +26,14 @@ Xiro is a powerful **Miro-like real-time whiteboard** that empowers users to **d
 
 ### Team Boards View
 
-![Team Boards](https://user-images.githubusercontent.com/theBappy/team-boards-screenshot.png)
+![Team Board![screencapture-localhost-3000-2025-07-07-00_18_18](https://github.com/user-attachments/assets/a99311d4-11ac-4fac-9da6-00569fd906cc)
+s]
 
 ### Whiteboard View
 
-![Whiteboard](https://user-images.githubusercontent.com/theBappy/whiteboard-screenshot.png)
+![Whiteboard]
+![screencapture-localhost-3000-board-j575e6actw8zb7z99r4gmpw73h7k7r87-2025-07-07-00_23_17](https://github.com/user-attachments/assets/f2cc4ce5-a414-4296-9859-50fa040b898e)
+
 
 ---
 
